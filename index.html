@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+	<body>
+	  	<!-- вступление и приветствие) -->
+		<div style="display:flex; flex-direction: column; justify-content:center; align-items:center; padding: 0% 5% 0 5%; margin: 15% 0 80px 0">
+			<p style="font-size:35px; text-align:center">Здравствуйте, представляю вам пример новостной веб-странички с использованием XLM!</p>
+			<div class="button" style="display:flex; flex-direction: column; justify-content:center; background:red; border:2px solid grey; border-radius:1px; height:50px; width: 250px">
+				<p style="color:white; text-align: center;">Переход в XML</p>
+			</div>
+		</div>
+	</body>
+	<script src='not_mine/jquery-3.6.1.min.js'></script>
+	<script src='not_mine/bootstrap.min.js'></script>
+	<script>
+	  //вывод таблицы с данными из XML документа
+	    //для IE7+, Firefox, Chrome, Opera, Safari:
+      	  if (window.XMLHttpRequest)
+      	  {
+         	xmlhttp = new XMLHttpRequest();
+      	  }
+        //для IE6, IE5:
+      	  else
+      	  {
+         	xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      	  }
+        //получение данных из XML документа с помощью XMLHttpRequest и сохранение их как XML кода:
+	      xmlhttp.open("GET","main_info.xml",false);
+      	  xmlhttp.send();
+      	  xmlDom = xmlhttp.responseXML;
+        //выведение полученных данных в HTML
+      	  document.write("<div  style='display:flex; justify-content:center; align-items:center'>")
+	      document.write("<table border='1'>");
+	      document.write("<tr><td  style='background:#D0F0C0; text-align:center' colspan='2'>Подготовил проект:</td></tr>");
+      	  var x = xmlDom.getElementsByTagName("data");
+      	  for (i = 0; i < x.length; i++)
+      	  {
+    		document.write("<tr><td>");
+			document.write(x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue);
+			document.write("</td><td>");
+			document.write(x[i].getElementsByTagName("info")[0].childNodes[0].nodeValue);
+			document.write("</td></tr>");
+      	  }
+      	  document.write("</table>");
+      	  document.write("</div>")
+      //функционал кнопки
+	      	  $(".button").click(function() {
+	      	  	location.href = 'main_info.xml'
+	      	  })
+   </script>
+</html>

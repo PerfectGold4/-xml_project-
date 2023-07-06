@@ -5,7 +5,7 @@
 			<body>
 				<h2 style='font-size:50px; text-align:center'>Новости недели</h2>
 				<div>
-					<xsl:for-each select='newsList/newsBody'>
+					<xsl:for-each select='body/newsList/newsBody'>
 				        <div style='display:flex; justify-content:center; align-items:center'>
 				        	<span style='font-size:30px; text-align:center; background:#d0f0c0'>
 				        		<xsl:value-of select='headline'/>
