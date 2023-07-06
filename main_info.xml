@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet href='news_present.xsl' type='text/xsl'?>
-<body>
+<body xmlns:f="http://www.w3data.ru/about_me">
    <newsList>
       <newsBody>
          <headline>Граница обучения кадров разочаровала</headline>
@@ -65,18 +65,18 @@
          <dateline>Воскресенье, 01 июля 2023 14:01 МСК</dateline>
       </newsBody>
    </newsList>
-   <myData>
-      <data>
-         <type>ФИО:</type>
-         <info>Волков Илья Константинович</info>
-      </data>
-      <data>
-         <type>E-mail:</type>
-         <info>ilushavolkov@mail.ru</info>
-      </data>
-      <data>
-         <type>Ссылка на GitHub:</type>
-         <info>https://github.com/PerfectGold4/xml-project.git</info>
-      </data>
-   </myData>
+   <f:myData>
+      <f:data>
+         <f:type>ФИО:</f:type>
+         <f:info>Волков Илья Константинович</f:info>
+      </f:data>
+      <f:data>
+         <f:type>E-mail:</f:type>
+         <f:info>ilushavolkov@mail.ru</f:info>
+      </f:data>
+      <f:data>
+         <f:type>Ссылка на GitHub:</f:type>
+         <f:info>https://github.com/PerfectGold4/xml-project.git</f:info>
+      </f:data>
+   </f:myData>
 </body>

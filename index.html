@@ -36,13 +36,13 @@
       	  document.write("<div  style='display:flex; justify-content:center; align-items:center'>")
 	      document.write("<table border='1'>");
 	      document.write("<tr><td  style='background:#D0F0C0; text-align:center' colspan='2'>Подготовил проект:</td></tr>");
-      	  var x = xmlDom.getElementsByTagName("data");
+      	  var x = xmlDom.getElementsByTagName("f:data");
       	  for (i = 0; i < x.length; i++)
       	  {
     		document.write("<tr><td>");
-			document.write(x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue);
+			document.write(x[i].getElementsByTagName("f:type")[0].childNodes[0].nodeValue);
 			document.write("</td><td>");
-			document.write(x[i].getElementsByTagName("info")[0].childNodes[0].nodeValue);
+			document.write(x[i].getElementsByTagName("f:info")[0].childNodes[0].nodeValue);
 			document.write("</td></tr>");
       	  }
       	  document.write("</table>");

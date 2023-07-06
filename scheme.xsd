@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<xs:schema elementFormDefault='qualified' targetNamespace='main_info.xml' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='body'>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name='newsList'/>
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name='newsBody'/>
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name='headline' type='xs:string'/>
+                              <xs:element name='article' type='xs:string'/>
+                              <xs:element name='byline' type='xs:string'/>
+                              <xs:element name='dateline' type='xs:string'/>
+                           <xs:sequence>
+                        <xs:complexType>
+                  <xs:sequence>
+               <xs:complexType>
+            <xs:element name='f:myData'/>
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name='f:data'/>
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name='f:type' type='xs:string'/>
+                              <xs:element name='f:info' type='xs:string'/>
+                           </xs:sequence>
+                        </xs:complexType>
+                  </xs:sequence>
+               </xs:complexType>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
